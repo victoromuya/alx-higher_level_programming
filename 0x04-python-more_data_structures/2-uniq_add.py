@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+
 def uniq_add(my_list=[]):
-    uniq_list = set(my_list)
-    num = 0
+    """adds all unique integers in a list (only once for each integer)
+    You are not allowed to import any module
+    """
+    # return [result := result + num for num in new_list][-1]
 
-    for i in uniq_list:
-        num += i
+    new_list = list(set(my_list))
+    result = 0
 
-    return (num)
+    for num in new_list:
+        result += num
+    return result
